@@ -63,7 +63,7 @@ table {
 .site {
 	font-size	: 110%;
 	text-align	: justify;
-	width		: 800px;
+	width		: 640px;
 	margin		: 0em auto 2em auto;
 	line-height	: 1.5em;
 /*	-webkit-font-smoothing: subpixel-antialiased;
@@ -118,7 +118,7 @@ table {
 }
 .site .header .slogan {
 	margin		: 0.8em;
-	text-align	: right;
+	text-align	: center;
 	color		: #444;
 }
 
