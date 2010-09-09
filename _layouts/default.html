@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>{{ page.title }}</title>
+	<meta name="author" content="Jerome Etienne" />
+	
+	<!-- syntax highlighting CSS -->
+	<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+	
+	<!-- Homepage CSS -->
+	<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="/css/post.css" type="text/css" media="screen, projection" />
+	
+	<!-- font experiment 	// from http://code.google.com/webfonts/preview -->
+	<link  href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css" >
+	<link  href="http://fonts.googleapis.com/css?family=Crimson+Text:regular" rel="stylesheet" type="text/css" >
+
+	<script type="text/Javascript" src="/js/jquery/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+
+<div class="site">
+	<div class="header">
+		<a href="/">
+			<div class="title">JotNode</div>
+			<div class="slogan">IPv4 Reloaded</div>
+		</a>
+		<div class="menu">
+			<a href="/">Home</a>
+			<a href="/blog">Blog</a>
+			<a href="/download">Download</a>
+			<a href="/docs">Docs</a>
+			<a href="/about">About</a>
+		</div>
+	</div>
+  
+	{{ content }}
+  
+	<div class="footer">
+		<div class="contact">
+			JotNode.org
+			<br>
+			IPv4 Reloaded
+		</div>
+		<div class="contact">
+			<a href="http://wiki.github.com/jeromeetienne/mw/">wiki</a>
+			|
+			<a href="/about">about</a>
+			<br>
+			Built at {{ site.time }}
+			<!-- tweet button -- http://twitter.com/goodies/tweetbutton -->
+			<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://webpeer.it" data-text="WebPeer.it boosts your internet for free! Check it out!" data-count="none" data-via="webpeerit" data-related="jerome_etienne:The author">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	</div>
+</div>
+
+<!-- google analytic -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4037844-14']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

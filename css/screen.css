@@ -1,0 +1,326 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: #FFFFFF;
+	font		: 16px helvetica, arial, clean, sans-serif;
+	*font-size	: small;
+	text-align	: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size	: 100%;
+}
+
+h1 {
+	margin-top	: 1em;
+	margin-bottom	: 0.5em;
+	font-size	: larger;
+}
+
+p {
+	margin: 1em 0;
+}
+
+a {
+	color: #00a;
+}
+
+a:hover {
+	color: black;
+}
+
+a:visited {
+	color: #a0a;
+}
+
+table {
+	font-size: inherit;
+	font: 100%;
+}
+
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.site {
+	font-size	: 110%;
+	text-align	: justify;
+	width		: 800px;
+	margin		: 0em auto 2em auto;
+	line-height	: 1.5em;
+/*	-webkit-font-smoothing: subpixel-antialiased;
+*/
+}
+
+
+
+
+/********************************************************************************/
+/********************************************************************************/
+/*	Header title/slogan							*/
+/********************************************************************************/
+/********************************************************************************/
+.site .header {
+	border-bottom: thin;
+}
+
+.site .header a {
+	text-decoration:	none;
+}
+
+.site .header .title {	/* From google font directory */
+	padding-top	: 45px;
+	font-size	: 90px;
+	font-family	: 'Vollkorn', serif;
+	font-style	: normal;
+	font-weight	: 700;
+	text-shadow	: 6px 6px 6px #ccc;
+	text-transform	: none;
+	letter-spacing	: 0.019em;
+	word-spacing	: 0em;
+	line-height	: 0em;
+}
+
+.site .header .slogan {	/* From google font directory */
+	padding-top	: 12px;
+	font-size	: 24px;
+	font-family	: 'Crimson Text', serif;
+	font-style	: normal;
+	font-weight	: 700;
+	text-shadow	: 2px 2px 2px #aaa;
+	text-transform	: none;
+	letter-spacing	: 0.083em;
+	word-spacing	: 0em;
+	line-height	: 0.5em;
+}
+
+.site .header .title {
+	text-align	: center;
+	color		: #222;
+}
+.site .header .slogan {
+	margin		: 0.8em;
+	text-align	: right;
+	color		: #444;
+}
+
+/********************************************************************************/
+/********************************************************************************/
+/*	Header menu								*/
+/********************************************************************************/
+/********************************************************************************/
+.menu {
+	color		: #a00;
+	font-weight	: bold;
+	margin-top	: 1.5em;
+	margin-bottom	: 1em;
+	border-bottom	: thin;
+}
+
+.site .menu a {
+	color		: #999;
+	text-decoration	: none;
+	margin-left	: 1em;
+	
+	padding		: 10px;
+}
+
+.site .menu a:hover {
+	border			: 2px solid #ddd;
+	padding			: 8px;
+
+	background		: #ddf;
+
+	color			: #444;
+	text-shadow		: none;
+
+	border-radius		: 10px;
+	-moz-border-radius	: 10px;
+	-webkit-border-radius	: 10px;
+}
+
+/********************************************************************************/
+/********************************************************************************/
+/*	synopsys								*/
+/********************************************************************************/
+/********************************************************************************/
+.synopsys .column_1 {
+	float		: left;
+	width		: 480px;
+	line-height	: 1.7em;
+}
+.synopsys .column_2 {
+	float		: right;
+	width		: 300px;
+	border-left	: solid;
+	text-align	: center;
+}
+.synopsys .column_2 li {
+	list-style-type	: none;
+	font-size	: 100%;
+	padding-bottom	: 1em;
+	padding-top	: 1em;
+	padding-left	: 0.5em;
+	line-height	: 0px;
+	text-transform	: capitalize;
+	font-family	: 'Crimson Text', serif;
+	letter-spacing	: 0.083em;
+}
+body.mozilla .synopsys .column_2 li {	/* mozilla specific css */
+	letter-spacing	: 0em;
+}
+
+.synopsys .column_2 a {
+	padding			: 10px;
+}
+.synopsys .column_2 a:hover {
+	border			: 2px solid #ddd;
+	padding			: 8px;
+
+	background		: #ddf;
+	text-decoration		: none;
+
+	border-radius		: 10px;
+	-moz-border-radius	: 10px;
+	-webkit-border-radius	: 10px;
+}
+
+/********************************************************************************/
+/********************************************************************************/
+/*	sliders									*/
+/********************************************************************************/
+/********************************************************************************/
+  
+#slider li div.slide {
+	border			: 2px solid #ddd;
+	background-color	: #eef;
+
+	border-radius		: 15px;
+	-moz-border-radius	: 15px;
+	-webkit-border-radius	: 15px;
+
+	margin			: 5px;
+	padding-top		: 0px;
+	padding-bottom		: 15px;
+	padding-right		: 15px;
+	padding-left		: 15px;
+}
+
+#slider {
+	width		: 800px;
+}
+#slider ul, #slider li{
+	margin		: 0;
+	padding		: 0;
+	list-style	: none;
+}
+#slider li { 
+	width		: 800px;
+	overflow	: hidden; 
+}
+
+
+div.synopsys {
+	style		: "padding-left: 8px";
+}
+
+div.synopsys a {
+	color		: black;
+	font-weight	: bolder;
+	text-decoration	: none;
+}
+
+div.synopsys a:hover {
+	text-decoration	: underline;
+}
+
+#slider div.slide a {
+	color		: black;
+	font-weight	: bolder;
+	text-decoration	: none;
+}
+
+#slider div.slide a:hover {
+	text-decoration	: underline;
+}
+
+.slider_menu {
+	text-align	: center;
+	margin-top	: 15px;
+}
+
+.slider_menu a {
+	color			: #000;
+	font-weight		: bolder;
+	text-decoration		: none;
+
+	border			: 2px solid #ddd;
+	background-color	: #eef;
+
+	border-radius		: 0.5em;
+	-moz-border-radius	: 0.5em;
+	-webkit-border-radius	: 0.5em;
+
+	margin			: 0.5em;
+	padding			: 0.5em;
+}
+
+.slider_menu a:hover {
+	background-color	: #ccf;
+	box-shadow		: 0px 0px 0.5em #666;
+	-webkit-box-shadow	: 0px 0px 0.5em #666;
+}
+
+
+/********************************************************************************/
+/********************************************************************************/
+/*	docs/index								*/
+/********************************************************************************/
+/********************************************************************************/
+
+#docs_index div.highlight {
+	border		: 1px solid #ddd;
+	background-color: #eef;
+	font-size	: 85%;
+	padding		: 0.2em;
+}
+
+/********************************************************************************/
+/********************************************************************************/
+/*	Footer									*/
+/********************************************************************************/
+/********************************************************************************/
+.site .footer {
+	font-size	: 80%;
+	color		: #666;
+	border-top	: 4px solid #eee;
+	margin-top	: 2em;
+	overflow	: hidden;
+}
+
+.site .footer .contact {
+	float		: left;
+	margin-right	: 3em;
+}
+
+.site .footer .contact a {
+	color		: #8085C1;
+}
