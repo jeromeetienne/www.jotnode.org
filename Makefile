@@ -18,5 +18,5 @@ jekyll_build:
 	touch $(JEKYLL_DST)/.nojekyll
 	/home/jerome/work/jekyll/bin/jekyll . $(JEKYLL_DST)
 	
-jekyll_monitor:
+jekyll_monitor: jekyll_build
 	(while inotifywait -r -e modify,attrib,create . ; do make jekyll_build; done)
