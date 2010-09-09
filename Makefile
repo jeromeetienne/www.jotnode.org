@@ -11,7 +11,7 @@ server:
 	lighttpd -f lighttpd.conf  -D
 		
 upload: jekyll_build
-	(cd $(JEKYLL_DST) && git add . && git commit -a -m 'new build' && git push)
+	(cd $(JEKYLL_DST) && git add . && git commit -a -m 'new build' && git push origin gh-pages)
 
 jekyll_build:
 	(cd $(JEKYLL_DST) && git reset --hard origin/gh-pages)
