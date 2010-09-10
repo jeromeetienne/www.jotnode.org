@@ -1,0 +1,47 @@
+---
+layout: post
+---
+
+Those notes about dnsname in jotname. 
+
+h1. Definitions 
+* Each jotnode got a identifier
+* each jotnode has a certificate to identify itself
+* each jotnode got a dns name
+* certificates may be of
+** *self signed*: user define their own name and the trust is made among friends. ala ssh
+*** so a local view. only your jotnode sees it, with all the one of your friend.
+** *auth signed*: ala https certificate
+*** so a more global view. whoever trust the same ca, will be able to use your name
+** *none signed*: automatically generated name. not able to receive connections
+*** use a special tld *.unauthenticated
+** seems to cover all cases
+
+h1. *current* format of the dnsname
+* lists
+** superhost.* is selfsigned
+*** star means that the domain.tld is useless as it has only a local view
+** *.supertld is a root ca
+** superhost.supertld hostname for a authsigned
+* issue with current dnsnameing
+** not the usual *.domain.tld
+** only domain.tld
+* could it be a transitional state to a normal *subdomains.domain.tld*
+** and current domain.tld system be the @ dns record ?
+** it would be nice as i could write the tools according to this possibility and thus have a easier transition later.
+** ok *find one*
+
+h1. wild ideas
+
+This is a list of wild ideas
+
+h2. what about using actual dns software + arch ?
+* thus reuse all their software without the need to maintain it, and with the flexibility, and with the existing knowledge
+* bind
+* The mobility is already available via "dyndns":http://en.wikipedia.org/wiki/Dynamic_DNS
+* the security is already available via "dnssec":http://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions
+* if both works well (*to check*) then normal dns software could be used
+* it is *not sure* that this software works well in this case, as it is a rare case
+* even if it is actually working, you dunno how to configure it
+* how to get those info ? possibility + execution
+** somebody with field-experience on dns ?
