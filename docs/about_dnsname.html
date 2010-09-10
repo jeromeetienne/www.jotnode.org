@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="author" content="Jerome Etienne" />
+	
+	<!-- syntax highlighting CSS -->
+	<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+	
+	<!-- Homepage CSS -->
+	<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="/css/post.css" type="text/css" media="screen, projection" />
+	
+	<!-- font experiment 	// from http://code.google.com/webfonts/preview -->
+	<link  href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css" >
+	<link  href="http://fonts.googleapis.com/css?family=Crimson+Text:regular" rel="stylesheet" type="text/css" >
+
+	<script type="text/Javascript" src="/js/jquery/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+
+<div class="site">
+	<div class="header">
+		<a href="/">
+			<div class="title">Jotnode</div>
+			<div class="slogan">IPv4 Reloaded</div>
+		</a>
+		<div class="menu">
+			<a href="/">Home</a>
+			<a href="/blog">Blog</a>
+			<a href="/download">Download</a>
+			<a href="/docs">Docs</a>
+			<a href="/about">About</a>
+		</div>
+	</div>
+  
+	<div id="post">
+<p>Those notes about dnsname in jotname.</p>
+<h1>Definitions</h1>
+<ul>
+	<li>Each jotnode got a identifier</li>
+	<li>each jotnode has a certificate to identify itself</li>
+	<li>each jotnode got a dns name</li>
+	<li>certificates may be of
+	<ul>
+		<li><strong>self signed</strong>: user define their own name and the trust is made among friends. ala ssh
+		<ul>
+			<li>so a local view. only your jotnode sees it, with all the one of your friend.</li>
+		</ul></li>
+		<li><strong>auth signed</strong>: ala https certificate
+		<ul>
+			<li>so a more global view. whoever trust the same ca, will be able to use your name</li>
+		</ul></li>
+		<li><strong>none signed</strong>: automatically generated name. not able to receive connections
+		<ul>
+			<li>use a special tld *.unauthenticated</li>
+		</ul></li>
+		<li>seems to cover all cases</li>
+	</ul></li>
+</ul>
+<h1><strong>current</strong> format of the dnsname</h1>
+<ul>
+	<li>lists
+	<ul>
+		<li>superhost.* is selfsigned
+		<ul>
+			<li>star means that the domain.tld is useless as it has only a local view</li>
+		</ul></li>
+		<li>*.supertld is a root ca</li>
+		<li>superhost.supertld hostname for a authsigned</li>
+	</ul></li>
+	<li>issue with current dnsnameing
+	<ul>
+		<li>not the usual *.domain.tld</li>
+		<li>only domain.tld</li>
+	</ul></li>
+	<li>could it be a transitional state to a normal <strong>subdomains.domain.tld</strong>
+	<ul>
+		<li>and current domain.tld system be the @ dns record ?</li>
+		<li>it would be nice as i could write the tools according to this possibility and thus have a easier transition later.</li>
+		<li>ok <strong>find one</strong></li>
+	</ul></li>
+</ul>
+<h1>wild ideas</h1>
+<p>This is a list of wild ideas</p>
+<h2>what about using actual dns software + arch ?</h2>
+<ul>
+	<li>thus reuse all their software without the need to maintain it, and with the flexibility, and with the existing knowledge</li>
+	<li>bind</li>
+	<li>The mobility is already available via <a href="http://en.wikipedia.org/wiki/Dynamic_DNS">dyndns</a></li>
+	<li>the security is already available via <a href="http://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">dnssec</a></li>
+	<li>if both works well (<strong>to check</strong>) then normal dns software could be used</li>
+	<li>it is <strong>not sure</strong> that this software works well in this case, as it is a rare case</li>
+	<li>even if it is actually working, you dunno how to configure it</li>
+	<li>how to get those info ? possibility + execution
+	<ul>
+		<li>somebody with field-experience on dns ?</li>
+	</ul></li>
+</ul>
+</div>
+
+  
+	<div class="footer">
+		<div class="contact">
+			Jotnode - ipv4 reloaded
+		</div>
+		<div class="contact">
+			Built at Fri Sep 10 10:30:13 +0200 2010
+			<!-- tweet button -- http://twitter.com/goodies/tweetbutton -->
+			<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://webpeer.it" data-text="WebPeer.it boosts your internet for free! Check it out!" data-count="none" data-via="webpeerit" data-related="jerome_etienne:The author">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	</div>
+</div>
+
+<!-- google analytic -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4037844-14']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
