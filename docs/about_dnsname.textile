@@ -31,9 +31,22 @@ h1. *current* format of the dnsname
 ** it would be nice as i could write the tools according to this possibility and thus have a easier transition later.
 ** ok *find one*
 
+h1. file formats
+* various type of files
+** lident for local identity: only one
+** rident for remove selfsigned dnsname, that i trust locally
+*** how do i call them locally? their own view on their names may be different, several may have the same
+* rootca private + certificate
+* authsigned private + certificate
+
+
 h1. wild ideas
 
 This is a list of wild ideas
+
+h2. more than one identity per jotnode
+* thus it would be easier to handle the naming
+** currently if i got a selfsigned, i cant be a authsigned
 
 h2. what about using actual dns software + arch ?
 * thus reuse all their software without the need to maintain it, and with the flexibility, and with the existing knowledge
