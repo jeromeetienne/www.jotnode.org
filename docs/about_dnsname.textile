@@ -39,6 +39,10 @@ h1. file formats
 * rootca private + certificate
 * authsigned private + certificate
 
+h1. how to register a selfsigned
+* @neoip-router --register myname.*@
+* 
+
 
 h1. wild ideas
 

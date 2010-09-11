@@ -6,3 +6,4 @@ title: jotnode documentation
 Jotnode is great and some great documentations are to be written :)
 
 * "about dnsname":about_dnsname.html
+* "about jotnode-ctrl":about_jotnode_ctrl.html
