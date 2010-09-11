@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Jotnode about</title>
+	<title></title>
 	<meta name="author" content="Jerome Etienne" />
 	
 	<!-- syntax highlighting CSS -->
@@ -35,30 +35,51 @@
 		</div>
 	</div>
   
-	<div>
-	<h1>What is Jotnode ?</h1>
-	<p>
-		Jotnode is great technology which gonna be described here.
-	</p>
-	<h1>Who am i ?</h1>
-	<p>
-		Jotnode is a single-man job by me, <a href="http://jetienne.com">jerome etienne</a>.
-		I left my fulltime job, went in a basement for several years and came up
-		with this (and other things, stay tuned). I tried to make a
-		startup out of it, but failed. Well, so be it, shit happens, you know.
-	</p>
-	<p>
-		All this hard work ending up wasted in a drawer ? no way!
-		I am giving it to the world. Opensource ftw, baby!
-	</p>
-	<h1>Contact</h1>
-	Jerome Etienne's <a href="mailto:jerome.etienne@gmail.com">email</a>
-	and 
-	<a href="http://twitter.com/jerome_etienne">twitter</a>
-	<br/>
-	jotnode on <a href="irc://irc.freenode.net/%26jotnode">irc</a> (#jotnode in freenode)
+	<div id="post">
+<p>Those notes about <strong>jotnode-ctrl</strong>. This tool is the basic command line controller for jotnode. This page is currently more a specification than a documentation as the tool is not yet written. It will be part of the node-neoip repository.</p>
+<h1><span class="caps">TODO</span></h1>
+<ul>
+	<li>this is the OneStop command for the user
+	<ul>
+		<li>the rest may be in nodejs directly or in bash, or just warpper on top of neoip-jotnode.cpp</li>
+		<li>but this command is the one stop</li>
+	</ul></li>
+</ul>
+<h1>available commands</h1>
+<ul>
+	<li>jotnode-ctrl identity
+	<ul>
+		<li>provides info on the identity + acl</li>
+		<li>direct to neoip-router &#8212;info</li>
+	</ul></li>
+	<li>jotnode-ctrl export_selfsigned DST_FILE
+	<ul>
+		<li>to export the local identity</li>
+		<li>valid <span class="caps">IIF</span> selfsigned
+		<ul>
+			<li>authsigned are global so no need to export it</li>
+		</ul></li>
+	</ul></li>
+	<li>jotnode-ctrl import_selfsigned SRC_FILE
+	<ul>
+		<li>the import part of the <code>jotnode-ctrl export_selfsigned</code> command</li>
+	</ul></li>
+	<li>jotnode-ctrl register <span class="caps">DNSNAME</span></li>
+	<li>jotnode-ctrl create_ca
+	<ul>
+		<li>to create a certificate authority</li>
+	</ul></li>
+	<li>jotnode-ctrl sign_ca
+	<ul>
+		<li>ti</li>
+	</ul></li>
+	<li>jotnode-ctrl start
+	<ul>
+		<li>same as sudo /etc/init.d/neoip-router start</li>
+		<li>do it for all init.d command</li>
+	</ul></li>
+</ul>
 </div>
-  
 
   
 	<div class="footer">
